@@ -2,11 +2,11 @@ import http from './HttpClient';
 
 class AuthService {
 	login(data: any) {
-		return http.post('admin/login', data);
+		return http.post('login', data);
 	}
 
 	async logout() {
-		return http.delete('admin/logout')
+		return http.delete('logout')
 			.then(res => {
 				localStorage.removeItem('access_token');
 				localStorage.removeItem('user_logged');
